@@ -1,47 +1,49 @@
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import React, { useState, useEffect } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Physics, useBox, usePlane } from "@react-three/cannon";
+import { Text3D } from "@react-three/drei";
 
-// ボックス(立方体)のコンポーネントを定義
-function Box(props) {
-  // メッシュへアクセスする
-  const meshRef = useRef()
+import Floor from "./compornent/_background/Floor/Floor";
+import FallingText from "./compornent/_background/Text/FallingText";
 
-  // 状態の設定
-  const [hovered, setHover] = useState(false) // マウスが被っているか否か
-  const [active, setActive] = useState(false) // マウスクリックで変化
 
-  // メッシュをフレームごとに回転させます
-  useFrame((state, delta) => (meshRef.current.rotation.x += delta))
+// ===== メインシーン =====
+export default function App() {
+  // ---------- 表示タイミング管理 ----------
+  const [showHome, setShowHome] = useState(false);
+  const [showWorks, setShowWorks] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
 
-  // コンポーネントを描画する
+  useEffect(() => {
+    // レンダー直後
+    setTimeout(() => setShowHome(true), 0);
+
+    // 1秒後
+    setTimeout(() => setShowWorks(true), 1000);
+
+    // 2秒後
+    setTimeout(() => setShowAbout(true), 2000);
+  }, []);
+
   return (
-    <mesh
-      {...props}
-      ref={meshRef}
-      scale={active ? 1.5 : 1}
-      onClick={(event) => setActive(!active)}
-      onPointerOver={(event) => setHover(true)}
-      onPointerOut={(event) => setHover(false)}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
-    </mesh>
-  )
-}
+    <Canvas
+      shadows
+      style={{ background: "black", width: "100vw", height: "100vh" }}
+      camera={{ position: [0, 3, 10], fov: 40 }}
+    >
+      {/* 光源 */}
+      <ambientLight intensity={1.2} />
+      <directionalLight position={[5, 10, 5]} intensity={3} castShadow />
+      <pointLight position={[0, 6, 5]} intensity={5} />
 
-// アプリケーションのエントリーポイントとなるコンポーネントを定義
-function App() {
-  return (
-    <div className="App">
-      <Canvas>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        {/* Boxコンポーネントを配置 */}
-        <Box position={[-1.2, 0, 0]} />
-        <Box position={[1.2, 0, 0]} />
-      </Canvas>
-    </div>
+      <Physics gravity={[0, -9.8, 0]}>
+        <Floor />
+
+        {/* 順番に落下 */}
+        {showHome && <FallingText text="HOME" color="#3fa9f5" />}
+        {showWorks && <FallingText text="WORKS" color="#a33ff5" />}
+        {showAbout && <FallingText text="ABOUT ME" color="#f5a63f" />}
+      </Physics>
+    </Canvas>
   );
 }
-
-// Appコンポーネントを他のファイルで利用できるようにエクスポート
-export default App;
