@@ -1,4 +1,4 @@
-import {usePlane } from "@react-three/cannon";
+import { usePlane } from "@react-three/cannon";
 
 
 export default function Floor() {
@@ -9,7 +9,7 @@ export default function Floor() {
   return (
     <mesh ref={ref} receiveShadow>
       <planeGeometry args={[20, 20]} />
-      <meshStandardMaterial color="#ff0000" />
+      <meshStandardMaterial color="#000" />
     </mesh>
   );
 }

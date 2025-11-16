@@ -1,0 +1,31 @@
+.lists {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+
+    top: 30px;
+    left: 40px;
+
+
+
+    .home {
+        font-size: 48px;
+        color: aliceblue;
+        cursor: pointer;
+    }
+
+    .works {
+        margin-inline-start: 2rem;
+        font-size: 36px;
+        color: aliceblue;
+        cursor: pointer;
+    }
+
+    .aboutMe {
+        margin-inline-start: 2rem;
+        font-size: 36px;
+        color: aliceblue;
+        cursor: pointer;
+    }
+}

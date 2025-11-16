@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Physics, useBox, usePlane } from "@react-three/cannon";
-import { Text3D } from "@react-three/drei";
 
 import Floor from "./compornent/_background/Floor/Floor";
 import FallingText from "./compornent/_background/Text/FallingText";
@@ -27,7 +26,7 @@ export default function App() {
 
   return (
     <Canvas
-      shadows
+      // shadows
       style={{ background: "black", width: "100vw", height: "100vh" }}
       camera={{ position: [0, 3, 10], fov: 40 }}
     >
