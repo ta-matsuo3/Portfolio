@@ -1,33 +1,48 @@
-.worksList {
-    position: absolute;
-    max-width: 100%;
-    z-index: 1;
-    right: 20px;
-    top: 100px;
-    padding-inline: 250px;
+.work {
+    transition: 3000ms;
 
-    h2 {
-        color: #fff;
-        border-bottom: 1px solid #fff;
+    .worksList {
+        position: absolute;
+        width: calc(100% - 250px);
+        z-index: 1;
+        left: -100%;
+        top: 100px;
 
-    }
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 250px);
+            gap: 1rem;
 
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-
-        li {
-            list-style: none;
-
-            img {
-                width: 250px;
+            h2 {
+                display: block;
+                grid-column: 1 / -1;
+                color: #fff;
+                border-bottom: 1px solid #fff;
             }
 
-            p {
-                line-height: 0px;
-                color: #fff;
+            li {
+                list-style: none;
+                width: 250px;
+                background: #222;
+                border-radius: 8px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    display: block;
+                }
+
+                p {
+                    color: #fff;
+                    line-height: 0;
+                    text-align: center;
+                }
             }
         }
     }
+
+    .worksList.active {
+        left: 250px
+    }
+
 }

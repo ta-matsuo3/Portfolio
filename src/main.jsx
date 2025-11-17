@@ -7,8 +7,6 @@ import Works from './compornent/_main/Works/Works.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Home />
-    <Works />
     <App />
   </StrictMode>,
 )

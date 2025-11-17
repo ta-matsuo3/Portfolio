@@ -1,5 +1,6 @@
 const worksList = [
     {
+        id: 1,
         title: "架空のTVゲームのホームページ",
         url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
         image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
@@ -12,6 +13,7 @@ const worksList = [
         type: 'animation'
     },
     {
+        id: 2,
         title: "架空のTVゲームのホームページ",
         url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
         image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
@@ -24,6 +26,7 @@ const worksList = [
         type: 'animation'
     },
     {
+        id: 3,
         title: "架空のTVゲームのホームページ",
         url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
         image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
@@ -36,6 +39,7 @@ const worksList = [
         type: 'animation'
     },
     {
+        id: 4,
         title: "架空のTVゲームのホームページ",
         url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
         image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
@@ -48,6 +52,7 @@ const worksList = [
         type: 'animation'
     },
     {
+        id: 5,
         title: "架空のTVゲームのホームページ",
         url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
         image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
