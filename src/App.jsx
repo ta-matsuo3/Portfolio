@@ -8,12 +8,16 @@ export default function App() {
   const [isActive, setIsActive] = useState(false)
 
   useEffect(() => {
-    if (isClickWork) {
-      setIsActive(isActive => !isActive);
-      console.log(isActive);
-
-    }
+    setIsActive(isActive => !isActive);
   }, [isClickWork]);
+
+  useEffect(() => {
+    if (isActive) {
+      document.body.style.overflow = "";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, [isActive]);
 
   return (
     <>

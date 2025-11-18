@@ -25,14 +25,14 @@ export default function Works({ isActive }) {
     )
 
     return (
-        <div className={styles.work}>
+        <section className={isActive ? `${styles.work} ${styles.active}` : styles.work}>
 
             <div className={isActive ? `${styles.worksList} ${styles.active}` : styles.worksList} >
-                <ul className={styles.listAnime}><h2>アニメーション</h2>{listAnime}</ul>
-                <ul className={styles.listSite}><h2>サイト</h2>{listSite}</ul>
-                <ul className={styles.listApp}> <h2>アプリケーション</h2>{listApp}</ul>
+                <ul className={styles.listAnime}><h2>Animation</h2>{listAnime}</ul>
+                <ul className={styles.listSite}><h2>Site/Blog</h2>{listSite}</ul>
+                <ul className={styles.listApp}> <h2>Web Application</h2>{listApp}</ul>
             </div>
 
-        </div>
+        </section>
     )
 }

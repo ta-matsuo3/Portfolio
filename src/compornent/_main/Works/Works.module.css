@@ -1,12 +1,15 @@
 .work {
-    transition: 3000ms;
+    position: relative;
+    overflow: hidden;
 
     .worksList {
         position: absolute;
         width: calc(100% - 250px);
         z-index: 1;
-        left: -100%;
+        transform: translateX(100%);
         top: 100px;
+        transition: 600ms ease-out;
+        opacity: 0;
 
         ul {
             display: grid;
@@ -17,7 +20,7 @@
                 display: block;
                 grid-column: 1 / -1;
                 color: #fff;
-                border-bottom: 1px solid #fff;
+                border-top: 1px solid #fff;
             }
 
             li {
@@ -42,7 +45,12 @@
     }
 
     .worksList.active {
-        left: 250px
+        transform: translateX(250px);
+        opacity: 1;
     }
+}
 
+.work.active {
+    position: static;
+    overflow: visible;
 }
