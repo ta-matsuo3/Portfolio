@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Backgroud from "./compornent/_background/Background/Background";
 import Home from "./compornent/_main/Home/Home";
 import Works from "./compornent/_main/Works/Works";
+import './App.css'
 
 export default function App() {
   const [isClickWork, setIsClickWork] = useState(false)

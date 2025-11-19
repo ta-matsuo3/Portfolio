@@ -1,65 +1,16 @@
 .work {
+    overflow: hidden;
 
     .worksList {
         position: absolute;
         width: calc(100% - 250px);
         z-index: 1;
-        transform: translateX(100%);
+        transform: translateX(calc(100% + 250px));
         top: 100px;
         transition: 600ms ease-out;
         opacity: 0;
+        /* overflow: hidden; */
 
-        .list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 250px);
-            gap: 1rem;
-
-            h2 {
-                display: block;
-                grid-column: 1 / -1;
-                color: #fff;
-                border-top: 1px solid #fff;
-                cursor: pointer;
-            }
-
-            .itemsWrapper {
-                grid-column: 1 / -1;
-                display: grid;
-                grid-template-columns: repeat(auto-fill, 250px);
-                gap: 1rem;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease-out;
-            }
-
-            .open {
-                max-height: 100%;
-            }
-
-            li {
-                list-style: none;
-                width: 250px;
-                background: #222;
-                border-radius: 8px;
-                overflow: hidden;
-
-
-                img {
-                    width: 100%;
-                    display: block;
-                }
-
-                p {
-                    color: #fff;
-                    line-height: 0;
-                    text-align: center;
-                }
-            }
-        }
     }
 
     .worksList.active {
