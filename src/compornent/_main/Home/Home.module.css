@@ -8,6 +8,10 @@
     top: 30px;
     left: 40px;
 
+    @media (width<=820px) {
+        position: absolute;
+    }
+
     li {
 
         font-size: 36px;

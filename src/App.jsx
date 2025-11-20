@@ -12,13 +12,13 @@ export default function App() {
     setIsActive(isActive => !isActive);
   }, [isClickWork]);
 
-  useEffect(() => {
-    if (isActive) {
-      document.body.style.overflow = "";
-    } else {
-      document.body.style.overflow = "hidden";
-    }
-  }, [isActive]);
+  // useEffect(() => {
+  //   if (isActive) {
+  //     document.body.style.overflow = "";
+  //   } else {
+  //     document.body.style.overflow = "hidden";
+  //   }
+  // }, [isActive]);
 
   return (
     <>

@@ -9,6 +9,16 @@
         color: #fff;
         border-top: 1px solid #fff;
         cursor: pointer;
+
+
+        svg {
+            margin-inline-end: 8px;
+            transition: 500ms ease;
+        }
+
+        svg.close {
+            transform: rotateX(180deg)
+        }
     }
 
     .itemsWrapper {

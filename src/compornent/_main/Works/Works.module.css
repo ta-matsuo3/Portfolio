@@ -1,6 +1,4 @@
 .work {
-    overflow: hidden;
-
     .worksList {
         position: absolute;
         width: calc(100% - 250px);
@@ -16,7 +14,17 @@
     .worksList.active {
         transform: translateX(250px);
         opacity: 1;
+
+        @media(width<=820px) {
+            transform: translateX(20px);
+            top: 200px;
+
+        }
+
+
     }
+
+
 }
 
 .work.active {

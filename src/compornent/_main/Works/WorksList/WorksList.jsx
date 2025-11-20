@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './WorksList.module.css'
+import icon from '../../../../assets/circle_arrow.svg'
 
 export default function WorksList({ list, title }) {
     const [open, setOpen] = useState(true);
@@ -31,7 +32,18 @@ export default function WorksList({ list, title }) {
     };
     return (
         <ul className={styles.list}>
-            <h2 onClick={toggle}>{title}</h2>
+            <h2 onClick={toggle} >
+                <svg className={open ? '' : styles.close} width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                    <g clip-path="url(#clip0_108_4)">
+                        <path d="M10.146 8.854L10.5 9.207L11.207 8.5L10.854 8.146L10.146 8.854ZM7.5 5.5L7.854 5.146L7.5 4.793L7.146 5.146L7.5 5.5ZM4.146 8.146L3.793 8.5L4.5 9.207L4.854 8.854L4.146 8.146ZM10.854 8.146L7.854 5.146L7.146 5.854L10.146 8.854L10.854 8.146ZM7.146 5.146L4.146 8.146L4.854 8.854L7.854 5.854L7.146 5.146ZM1 7.5C1 5.77609 1.68482 4.12279 2.90381 2.90381C4.12279 1.68482 5.77609 1 7.5 1V0C5.51088 0 3.60322 0.790176 2.1967 2.1967C0.790176 3.60322 0 5.51088 0 7.5H1ZM7.5 14C5.77609 14 4.12279 13.3152 2.90381 12.0962C1.68482 10.8772 1 9.22391 1 7.5H0C0 9.48912 0.790176 11.3968 2.1967 12.8033C3.60322 14.2098 5.51088 15 7.5 15V14ZM14 7.5C14 8.35359 13.8319 9.19883 13.5052 9.98744C13.1786 10.7761 12.6998 11.4926 12.0962 12.0962C11.4926 12.6998 10.7761 13.1786 9.98744 13.5052C9.19883 13.8319 8.35359 14 7.5 14V15C9.48912 15 11.3968 14.2098 12.8033 12.8033C14.2098 11.3968 15 9.48912 15 7.5H14ZM15 7.5C15 5.51088 14.2098 3.60322 12.8033 2.1967C11.3968 0.790176 9.48912 0 7.5 0V1C8.35359 1 9.19883 1.16813 9.98744 1.49478C10.7761 1.82144 11.4926 2.30023 12.0962 2.90381C12.6998 3.50739 13.1786 4.22394 13.5052 5.01256C13.8319 5.80117 14 6.64641 14 7.5H15Z" fill="white" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_108_4">
+                            <rect width="15" height="15" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                {title}</h2>
             <ul ref={contentRef} className={`${styles.itemsWrapper} ${open ? styles.open : ""}`}>{list}</ul>
         </ul>
     )
