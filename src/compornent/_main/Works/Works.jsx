@@ -4,7 +4,7 @@ import styles from "./Works.module.css"
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import WorksList from "./WorksList/WorksList";
-import WorkThumbnail from "./WorkThumbnail/WorkThumbnail";
+import WorkThumbnail from "../WorkThumbnail/WorkThumbnail";
 
 
 export default function Works({ isActive }) {
@@ -29,7 +29,6 @@ export default function Works({ isActive }) {
 
     return (
         <>
-            <WorkThumbnail />
             <section className={isActive ? `${styles.work} ${styles.active}` : styles.work}>
                 <div className={isActive ? `${styles.worksList} ${styles.active}` : styles.worksList} >
                     <WorksList title='Animation' list={listAnime} />

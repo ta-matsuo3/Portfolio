@@ -1,33 +1,37 @@
 .work {
+    /* position: relative; */
+    /* overflow: hidden; */
+
     .worksList {
-        position: absolute;
+        position: fixed;
         width: calc(100% - 250px);
         z-index: 1;
         transform: translateX(calc(100% + 250px));
         top: 100px;
         transition: 600ms ease-out;
         opacity: 0;
+        overflow-y: auto;
         /* overflow: hidden; */
+        height: calc(100% - 120px);
+        /* scale: 0; */
 
     }
 
     .worksList.active {
         transform: translateX(250px);
         opacity: 1;
+        /* scale: 1; */
 
         @media(width<=820px) {
+            width: calc(100%);
             transform: translateX(20px);
             top: 200px;
+            height: calc(100% - 220px);
 
         }
-
-
     }
-
-
 }
 
 .work.active {
-    position: static;
     overflow: visible;
 }

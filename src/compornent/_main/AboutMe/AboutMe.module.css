@@ -1,0 +1,75 @@
+.topics {
+    position: fixed;
+    max-width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.203);
+    transition: all 0.5s ease-in-out;
+
+    display: flex;
+    right: 0;
+    z-index: 1;
+
+    .aboutMeWrap {
+        transition: all 0.5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+
+
+
+        .aboutMe {
+            width: 300px;
+            height: 200px;
+            background: #444;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+            margin: 2rem;
+
+            /* 
+        right: 25px;
+        bottom: 25px;
+
+        margin: auto; */
+
+            button {
+                width: 100%;
+                height: auto;
+            }
+
+            &:hover {}
+        }
+
+        .expanded {
+            width: 800px;
+            height: 600px;
+
+        }
+
+        .skills {
+            width: 300px;
+            height: 100px;
+            background-color: #c2c2c280;
+            margin: 2rem;
+
+            p {
+                line-height: 0;
+                color: #fff;
+            }
+        }
+
+
+    }
+
+
+
+}
+
+.close {
+    scale: 0;
+    right: 100%;
+    opacity: 0;
+}
