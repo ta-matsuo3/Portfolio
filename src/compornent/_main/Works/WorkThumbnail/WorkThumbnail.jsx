@@ -12,7 +12,7 @@ export default function WorkThumbnail() {
             {expanded ?
                 'CLICK'
                 :
-                <button>bb</button>}
+                'aa'}
         </button>
     )
 }
