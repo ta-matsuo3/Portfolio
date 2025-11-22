@@ -1,9 +1,14 @@
 .thumbnail {
     display: flex;
+    justify-content: end;
+    background-color: #ffffff5f;
     width: 100%;
-    height: auto;
-
     align-items: flex-end;
+
+    @media(width<=770px) {
+        order: 2;
+        justify-content: start;
+    }
 
     .btn {
         z-index: 1;
@@ -16,29 +21,16 @@
         cursor: pointer;
         transition: all 0.5s ease-in-out;
 
+        margin: 0 2rem 2rem 2rem;
 
-
-        margin: 2rem;
-        margin-block-start: 10rem;
-
-        button {
-            width: 100%;
-            height: auto;
-        }
 
         &:hover {}
     }
 
     .expanded {
-        /* top: 600px; */
-        bottom: 0;
-        right: 0;
-        /* left: 250px; */
-
-        margin: auto;
-
-        width: 600px;
-        height: 800px;
+        width: 0;
+        scale: 0;
+        opacity: 0;
 
     }
 
@@ -46,4 +38,5 @@
         scale: 0;
         opacity: 0;
     }
+
 }

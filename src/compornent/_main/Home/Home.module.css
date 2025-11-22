@@ -6,7 +6,7 @@
     list-style: none;
 
     top: 30px;
-    left: 40px;
+    left: 36px;
 
     @media (width<=820px) {
         position: absolute;

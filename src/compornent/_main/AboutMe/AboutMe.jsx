@@ -4,10 +4,10 @@ import React, { Children, useState } from 'react'
 
 export default function AboutMe({ children, isClickWork, expanded, setExpanded }) {
     return (
-        <div className={`${isClickWork ? styles.close : ''} ${styles.topics}`}>
+        <div className={`${isClickWork ? styles.close : ''} ${styles.topics} ${expanded ? styles.expanded : ""}`}>
             {children}
             <div className={`${styles.aboutMeWrap} ${expanded ? styles.expanded : ""}`}>
-                <section className={styles.skills}><p>skills</p></section>
+                <section className={`${styles.skills} ${expanded ? styles.expanded : ""}`}><p>skills</p></section>
                 <section
                     className={`${styles.aboutMe} ${expanded ? styles.expanded : ""}`}
                     onClick={() => setExpanded(!expanded)}

@@ -25,11 +25,13 @@ export default function App() {
 
   return (
     <>
-      <Home isClickWork={isClickWork} setIsClickWork={setIsClickWork} />
-      <Works isActive={isActive} />
-      <AboutMe isClickWork={isClickWork} expanded={expanded} setExpanded={setExpanded}>
-        <WorkThumbnail isClickWork={isClickWork} setIsClickWork={setIsClickWork} />
-      </AboutMe>
+      <div className="Wrap">
+        <Home isClickWork={isClickWork} setIsClickWork={setIsClickWork} />
+        <Works isActive={isActive} />
+        <AboutMe isClickWork={isClickWork} expanded={expanded} setExpanded={setExpanded}>
+          <WorkThumbnail isClickWork={isClickWork} expanded={expanded} />
+        </AboutMe>
+      </div>
       <Backgroud />
     </>
   );

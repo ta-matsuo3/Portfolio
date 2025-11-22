@@ -1,18 +1,16 @@
 import styles from './WorkThumbnail.module.css'
 import React, { useState } from 'react'
 
-export default function WorkThumbnail({ isClickWork, setIsClickWork }) {
-    const [expanded, setExpanded] = useState(false);
+export default function WorkThumbnail({ isClickWork, expanded }) {
 
     return (
-        <div className={styles.thumbnail}>
-            <button
+        <div className={`${styles.thumbnail} ${expanded ? styles.expanded : ""}`}>
+            <section
                 className={`${isClickWork ? styles.close : ''} ${styles.btn} ${expanded ? styles.expanded : ""}`}
-                onClick={() => setExpanded(!expanded)}
             >
 
                 {expanded ? 'CLICK' : 'Work'}
-            </button >
+            </ section>
         </div>
     )
 }

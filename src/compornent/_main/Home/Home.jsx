@@ -3,6 +3,7 @@ import styles from "./Home.module.css"
 export default function Home({ isClickWork, setIsClickWork }) {
     const handleCkick = () => {
         setIsClickWork(!isClickWork)
+
     }
 
     return (
