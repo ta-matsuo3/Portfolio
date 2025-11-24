@@ -26,7 +26,7 @@ export default function App() {
   return (
     <>
       <div className="Wrap">
-        <Home isClickWork={isClickWork} setIsClickWork={setIsClickWork} />
+        <Home isClickWork={isClickWork} setIsClickWork={setIsClickWork} expanded={expanded} setExpanded={setExpanded} />
         <Works isActive={isActive} />
         <AboutMe isClickWork={isClickWork} expanded={expanded} setExpanded={setExpanded}>
           <WorkThumbnail isClickWork={isClickWork} expanded={expanded} />

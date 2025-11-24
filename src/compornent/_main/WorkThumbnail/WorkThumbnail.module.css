@@ -1,13 +1,14 @@
 .thumbnail {
     display: flex;
     justify-content: end;
-    background-color: #ffffff5f;
+    /* background-color: #ffffff5f; */
     width: 100%;
     align-items: flex-end;
 
     @media(width<=770px) {
         order: 2;
         justify-content: start;
+
     }
 
     .btn {
@@ -24,7 +25,15 @@
         margin: 0 2rem 2rem 2rem;
 
 
-        &:hover {}
+
+        @media(width<=770px) {
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin-inline: auto;
+
+        }
     }
 
     .expanded {

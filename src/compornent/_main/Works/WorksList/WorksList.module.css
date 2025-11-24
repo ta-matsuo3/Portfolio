@@ -55,9 +55,11 @@
         }
 
         p {
+            display: block;
             color: #fff;
-            line-height: 0;
+            line-height: 1;
             text-align: center;
+            padding-bottom: 12px;
         }
     }
 }
