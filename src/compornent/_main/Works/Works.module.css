@@ -13,7 +13,7 @@
 
 }
 
-.worksList.active {
+.active {
     transform: translateX(250px);
     opacity: 1;
     /* scale: 1; */
