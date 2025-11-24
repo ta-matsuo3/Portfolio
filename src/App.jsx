@@ -8,11 +8,13 @@ import AboutMe from "./compornent/_main/AboutMe/AboutMe";
 
 export default function App() {
   const [isClickWork, setIsClickWork] = useState(false)
-  const [isActive, setIsActive] = useState(true)
+  const [isActive, setIsActive] = useState(false)
   const [expanded, setExpanded] = useState(false)
 
   useEffect(() => {
     setIsActive(isActive => !isActive);
+    console.log(isActive);
+
   }, [isClickWork]);
 
   useEffect(() => {
