@@ -12,9 +12,7 @@ export default function App() {
   const [expanded, setExpanded] = useState(false)
 
   useEffect(() => {
-    setIsActive(isActive => !isActive);
-    console.log(isActive);
-
+    setIsActive(isClickWork);    // ← これだけでOK
   }, [isClickWork]);
 
   useEffect(() => {
