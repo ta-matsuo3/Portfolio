@@ -1,37 +1,29 @@
-.work {
-    /* position: relative; */
+.worksList {
+    position: fixed;
+    width: calc(100% - 250px);
+    z-index: 1;
+    transform: translateX(calc(100% + 250px));
+    top: 100px;
+    transition: 600ms ease-out;
+    opacity: 0;
+    overflow-y: auto;
     /* overflow: hidden; */
+    height: calc(100% - 120px);
+    /* scale: 0; */
 
-    .worksList {
-        position: fixed;
-        width: calc(100% - 250px);
-        z-index: 1;
-        transform: translateX(calc(100% + 250px));
-        top: 100px;
-        transition: 600ms ease-out;
-        opacity: 0;
-        overflow-y: auto;
-        /* overflow: hidden; */
-        height: calc(100% - 120px);
-        /* scale: 0; */
-
-    }
-
-    .worksList.active {
-        transform: translateX(250px);
-        opacity: 1;
-        /* scale: 1; */
-
-        @media(width<=820px) {
-            width: calc(100%);
-            transform: translateX(65px);
-            top: 220px;
-            height: calc(100% - 220px);
-
-        }
-    }
 }
 
-.work.active {
-    overflow: visible;
+.worksList.active {
+    transform: translateX(250px);
+    opacity: 1;
+    /* scale: 1; */
+
+    @media(width<=820px) {
+        width: calc(100%);
+        transform: translateX(65px);
+        top: 220px;
+        height: calc(100% - 220px);
+
+    }
+
 }

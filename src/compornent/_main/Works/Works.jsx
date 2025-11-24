@@ -9,7 +9,7 @@ import WorkThumbnail from "../WorkThumbnail/WorkThumbnail";
 export default function Works({ isActive }) {
     const listAnime = worksList.filter(item => item.type === 'animation').map((works, index) =>
         <li key={index}>
-            <a href={works.url} target="_blank"><img src={works.image} alt={works.title} /></a>
+            <a href={works.url} ><img src={works.image} alt={works.title} /></a>
             <p className={styles.title}>{works.title}</p>
         </li>
     )
@@ -28,13 +28,13 @@ export default function Works({ isActive }) {
 
     return (
         <>
-            <section className={isActive ? `${styles.work} ${styles.active}` : styles.work}>
-                <div className={isActive ? `${styles.worksList} ${styles.active}` : styles.worksList} >
+            <section>
+                <div className={`${styles.worksList} ${isActive ? styles.active : ''}`} >
                     <WorksList title='Animation' list={listAnime} />
                     <WorksList title='Site/Blog' list={listSite} />
                     <WorksList title='Web Application' list={listApp} />
                 </div>
-            </section>
+            </section >
         </>
 
     )
