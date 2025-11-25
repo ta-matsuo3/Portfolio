@@ -27,7 +27,13 @@ const worksList = [
             day: 18
         },
         program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'site'
+        type: 'site',
+        desc: 'Figmaで作成した自作カンプを忠実に再現し、サイトを構築した実習作品です。',
+        Notes: 'もっと動きのあるサイトにしたかったが、期限の都合で機能周りは最低限の実装となった',
+        period: '',
+        figma: '',
+
+
     },
     {
         title: "架空のゲームプラットフォーム",
