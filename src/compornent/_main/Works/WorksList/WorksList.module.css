@@ -3,12 +3,14 @@
     grid-template-columns: repeat(auto-fill, 250px);
     gap: 1rem;
 
+
     h2 {
         display: block;
         grid-column: 1 / -1;
         color: #fff;
         border-top: 1px solid #fff;
         cursor: pointer;
+        margin-block-start: 2rem;
 
 
         svg {

@@ -86,14 +86,16 @@
         .skills {
             width: 300px;
             height: 100px;
-            /* background-color: #c2c2c280; */
+            background-color: #444;
+            border-radius: 8px;
             transition: all 0.5s ease-in-out;
             margin: 2rem 2rem 0 2rem;
             align-self: flex-end;
+            padding: 1rem;
 
             &.expanded {
                 width: 450px;
-                height: 150px;
+                height: 200px;
 
                 @media(width<=770px) {
                     width: 300px;

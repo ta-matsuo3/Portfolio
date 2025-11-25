@@ -5,11 +5,15 @@ import Works from "./compornent/_main/Works/Works";
 import './App.css'
 import WorkThumbnail from "./compornent/_main/WorkThumbnail/WorkThumbnail";
 import AboutMe from "./compornent/_main/AboutMe/AboutMe";
+import Modal from "./compornent/_main/Works/WorksList/Modal/Modal";
 
 export default function App() {
   const [isClickWork, setIsClickWork] = useState(false)
   const [isActive, setIsActive] = useState(false)
   const [expanded, setExpanded] = useState(false)
+  const [isModal, setIsModal] = useState(false)
+  const [selectedWork, setSelectedWork] = useState(null);
+
 
   useEffect(() => {
     setIsActive(isClickWork);
@@ -27,10 +31,11 @@ export default function App() {
     <>
       <div className="Wrap">
         <Home isClickWork={isClickWork} setIsClickWork={setIsClickWork} expanded={expanded} setExpanded={setExpanded} />
-        <Works isActive={isActive} />
+        <Works isActive={isActive} isModal={isModal} setIsModal={setIsModal} setSelectedWork={setSelectedWork} />
         <AboutMe isClickWork={isClickWork} expanded={expanded} setExpanded={setExpanded}>
           <WorkThumbnail isClickWork={isClickWork} expanded={expanded} />
         </AboutMe>
+        <Modal work={selectedWork} setIsModal={setIsModal} isModal={isModal} />
       </div>
       <Backgroud />
     </>
