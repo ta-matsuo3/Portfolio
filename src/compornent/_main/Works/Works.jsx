@@ -30,9 +30,10 @@ export default function Works({ isActive }) {
         <>
             <section>
                 <div className={`${styles.worksList} ${isActive ? styles.active : ''}`} >
-                    <WorksList title='Animation' list={listAnime} />
+
                     <WorksList title='Site/Blog' list={listSite} />
                     <WorksList title='Web Application' list={listApp} />
+                    <WorksList title='Animation' list={listAnime} />
                 </div>
             </section >
         </>

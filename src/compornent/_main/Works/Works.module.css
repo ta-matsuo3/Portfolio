@@ -14,7 +14,7 @@
 }
 
 .active {
-    transform: translateX(250px);
+    transform: translateX(300px);
     opacity: 1;
     /* scale: 1; */
 

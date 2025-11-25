@@ -49,6 +49,12 @@
             transition: all 0.5s ease-in-out;
             margin: 2rem;
 
+            img {
+                width: 100px;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+            }
+
             button {
                 width: 100%;
                 height: auto;
@@ -137,4 +143,34 @@
         opacity: 1;
     }
 
+}
+
+
+.introduction {
+    display: flex;
+    margin: 1rem;
+    gap: 1rem;
+
+    .closeUp {
+        text-align: center;
+        margin-block: 1rem;
+
+        p {
+            font-size: 1rem;
+            line-height: 1;
+
+            span {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .desc {
+
+
+        p {
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
 }

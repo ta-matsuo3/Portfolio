@@ -48,7 +48,27 @@ export default function AboutMe({ children, isClickWork, expanded, setExpanded }
                     className={`${styles.aboutMe} ${expanded ? styles.expanded : ""}`}
                     onClick={() => setExpanded(!expanded)}
                 >
-                    <h2>{expanded ? 'CLICK' : 'aboutMe'}</h2>
+                    <h2>{expanded ?
+                        <div className={styles.introduction}>
+                            <div className={styles.closeUp}>
+                                <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=712&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="仮の画像" />
+                                <p>松尾 拓真 <br /><span>-Matsuo Takuma-</span></p>
+                            </div>
+                            <div className={styles.desc}>
+                                <p>関西在住。<br /> 7年デバッグ会社で勤めたが、プログラミングに興味を持ち、エンジニア転向を決意。職業訓練校で半年学習を行い、エンジニア志望で就職活動中<br /><br />ゲームが大好き。</p>
+                            </div>
+                        </div>
+                        :
+                        <div className={styles.introduction}>
+                            <div className={styles.closeUp}>
+                                <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=712&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="仮の画像" />
+                                <p>松尾 拓真 <br /><span>-Matsuo Takuma-</span></p>
+                            </div>
+                            <div className={styles.desc}>
+                                <p>関西在住。<br /> 7年デバッグ会社で勤めたが、プログラミングに興味を持ち、エンジニア転向を決意。職業訓練校で半年学習を行い、エンジニア志望で就職活動中<br /><br />ゲームが大好き。</p>
+                            </div>
+                        </div>
+                    }</h2>
                 </section>
             </div>
         </div>

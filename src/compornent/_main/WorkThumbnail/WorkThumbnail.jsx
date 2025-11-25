@@ -36,7 +36,7 @@ export default function WorkThumbnail({ isClickWork, expanded }) {
                                 <a href={item.url} target='_blank'><img src={item.image} alt={item.title} style={{ borderRadius: '8px', width: '100%', display: 'block' }} /></a>
                                 <p className={styles.title} style={{
                                     color: '#fff',
-                                    lineHeight: 0.5,
+                                    lineHeight: 1.4,
                                     textAlign: 'center',
                                     paddingBottom: '4px'
                                 }}>{item.title}</p>

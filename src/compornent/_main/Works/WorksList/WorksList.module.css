@@ -52,12 +52,14 @@
         img {
             width: 100%;
             display: block;
+            object-fit: contain;
+
         }
 
         p {
             display: block;
             color: #fff;
-            line-height: 1;
+            line-height: 1.8;
             text-align: center;
             padding-bottom: 12px;
         }

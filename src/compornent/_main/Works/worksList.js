@@ -1,65 +1,18 @@
+import platform from '../../../assets/platform.png'
+import blog from '../../../assets/reactBlog.png'
+import summer from '../../../assets/summer2.png'
+import pokemon from '../../../assets/PokemonGuesser.png'
+import comingSoon from '../../../assets/comingSoon.png'
+
 const worksList = [
     {
-        id: 1,
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
+        title: "準備中",
+        url: "",
+        image: comingSoon,
         productionDate: {
             year: 2025,
-            month: 10,
-            day: 17
-        },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'animation'
-    },
-    {
-        id: 2,
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
-        productionDate: {
-            year: 2025,
-            month: 10,
-            day: 17
-        },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'animation'
-    },
-    {
-        id: 3,
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
-        productionDate: {
-            year: 2025,
-            month: 10,
-            day: 17
-        },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'animation'
-    },
-    {
-        id: 4,
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
-        productionDate: {
-            year: 2025,
-            month: 10,
-            day: 17
-        },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'animation'
-    },
-    {
-        id: 5,
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
-        productionDate: {
-            year: 2025,
-            month: 10,
-            day: 17
+            month: 1,
+            day: 1
         },
         program: ['javaScript', 'GSAP', 'html', 'css',],
         type: 'animation'
@@ -71,96 +24,59 @@ const worksList = [
         productionDate: {
             year: 2025,
             month: 10,
-            day: 16
+            day: 18
         },
         program: ['javaScript', 'GSAP', 'html', 'css',],
         type: 'site'
     },
     {
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
+        title: "架空のゲームプラットフォーム",
+        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/platform.html",
+        image: platform,
         productionDate: {
             year: 2025,
             month: 10,
-            day: 16
+            day: 17,
         },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
+        program: ['javaScript', 'html', 'css',],
         type: 'site'
     },
     {
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
+        title: "架空のブログサイト",
+        url: "https://ta-matsuo3.github.io/reactBlogSite/",
+        image: blog,
         productionDate: {
             year: 2025,
-            month: 10,
-            day: 16
-        },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'site'
-    },
-    {
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
-        productionDate: {
-            year: 2026,
             month: 11,
+            day: 10
+        },
+        program: ['javaScript', 'GSAP', 'html', 'css',],
+        type: 'site'
+    },
+    {
+        title: "夏休みの日記",
+        url: "https://ta-matsuo3.github.io/bon_diary/diary.html",
+        image: summer,
+        productionDate: {
+            year: 2025,
+            month: 8,
             day: 17
         },
         program: ['javaScript', 'GSAP', 'html', 'css',],
+        type: 'site'
+    },
+    {
+        title: "[ゲーム]PokemonGuesser",
+        url: "https://ta-matsuo3.github.io/PokemonGuesser/",
+        image: pokemon,
+        productionDate: {
+            year: 2025,
+            month: 10,
+            day: 1
+        },
+        program: ['javaScript', 'html', 'css',],
         type: 'app'
-    },
-    {
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
-        productionDate: {
-            year: 2026,
-            month: 11,
-            day: 17
-        },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'app'
-    },
-
-    {
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
-        productionDate: {
-            year: 2026,
-            month: 10,
-            day: 17
-        },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'figma'
-    },
-    {
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
-        productionDate: {
-            year: 2026,
-            month: 10,
-            day: 17
-        },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'figma'
-    },
-    {
-        title: "架空のTVゲームのホームページ",
-        url: "https://ta-matsuo3.github.io/2025_10_fictional_LP/",
-        image: "https://ta-matsuo3.github.io/2025_10_fictional_LP/images/platform/pkg.png",
-        productionDate: {
-            year: 2026,
-            month: 10,
-            day: 17
-        },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'figma'
-    },
+    }
 ]
 
 export default worksList;
