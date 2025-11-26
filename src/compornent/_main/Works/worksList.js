@@ -1,7 +1,7 @@
 import platform from '../../../assets/platform.png'
 import blog from '../../../assets/reactBlog.png'
 import summer from '../../../assets/summer2.png'
-import pokemon from '../../../assets/PokemonGuesser.png'
+import pokemon from '../../../assets/pokemonGuesser.png'
 import comingSoon from '../../../assets/comingSoon.png'
 
 const worksList = [
