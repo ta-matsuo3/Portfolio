@@ -72,7 +72,7 @@
 
             &.expanded {
                 width: 700px;
-                height: 650px;
+                height: 500px;
 
                 @media(width<=770px) {
                     height: 400px;
@@ -84,6 +84,8 @@
 
 
         .skills {
+            display: flex;
+            flex-direction: column;
             width: 300px;
             height: 100px;
             background-color: #444;
@@ -95,7 +97,7 @@
 
             &.expanded {
                 width: 450px;
-                height: 200px;
+                height: 220px;
 
                 @media(width<=770px) {
                     width: 300px;
@@ -112,8 +114,33 @@
             }
 
             p {
-                line-height: 0;
+                line-height: 0.2;
                 color: #fff;
+            }
+
+            .svgs {
+                display: flex;
+                align-content: center;
+                margin-block-start: 0.5rem;
+                cursor: pointer;
+                gap: 0.5rem;
+
+                svg {
+                    width: 40px;
+                }
+            }
+
+            .others {
+                transition: all 0.5s ease-in-out;
+                opacity: 0;
+                max-height: 0;
+
+                &.expanded {
+                    opacity: 1;
+                    max-height: 500px;
+
+                }
+
             }
         }
     }
@@ -125,27 +152,8 @@
     right: 100%;
 }
 
-.svgs {
-    display: flex;
-    /* justify-content: center; */
-    align-content: center;
-    margin-block-start: 1rem;
-    cursor: pointer;
 
-    svg {
-        width: 50px;
-    }
-}
 
-.others {
-    transition: all 0.5s ease-in-out;
-    opacity: 0;
-
-    &.expanded {
-        opacity: 1;
-    }
-
-}
 
 
 .introduction {
@@ -168,8 +176,6 @@
     }
 
     .desc {
-
-
         p {
             font-size: 12px;
             font-weight: 600;

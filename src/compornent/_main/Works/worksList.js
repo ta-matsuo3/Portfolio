@@ -26,14 +26,16 @@ const worksList = [
             month: 10,
             day: 18
         },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
+        skills: ['html', 'css', 'js',],
+        others: ['GSAP',],
         type: 'site',
         desc: 'Figmaで作成した自作カンプを忠実に再現し、サイトを構築した実習作品です。',
-        Notes: 'もっと動きのあるサイトにしたかったが、期限の都合で機能周りは最低限の実装となった',
-        period: '',
-        figma: '',
-
-
+        Notes: '',
+        period: '2週間（デザイン5日/コーディング5日）',
+        figma: 'https://www.figma.com/design/6GKtuP8sajb5RXPttHYw8l/%E6%8E%88%E6%A5%ADLP?node-id=0-1&p=f&t=JwWunWVNTfz6p9p1-0',
+        github: 'https://github.com/ta-matsuo3/Portfolio',
+        target: '',
+        concept: '',
     },
     {
         title: "架空のゲームプラットフォーム",
@@ -44,7 +46,7 @@ const worksList = [
             month: 10,
             day: 17,
         },
-        program: ['javaScript', 'html', 'css',],
+        skills: ['html', 'css', 'js',],
         type: 'site'
     },
     {
@@ -56,7 +58,7 @@ const worksList = [
             month: 11,
             day: 10
         },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
+        skills: ['html', 'css', 'js', 'react'],
         type: 'site'
     },
     {
@@ -68,7 +70,7 @@ const worksList = [
             month: 8,
             day: 17
         },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
+        skills: ['html', 'css', 'js',],
         type: 'site'
     },
     {
@@ -80,7 +82,7 @@ const worksList = [
             month: 10,
             day: 1
         },
-        program: ['javaScript', 'html', 'css',],
+        skills: ['html', 'css', 'js',],
         type: 'app'
     }
 ]
