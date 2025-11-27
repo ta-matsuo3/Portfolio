@@ -3,7 +3,6 @@ import styles from "./Works.module.css"
 
 import { useRef, useState } from "react";
 import WorksList from "./WorksList/WorksList";
-import WorkThumbnail from "../WorkThumbnail/WorkThumbnail";
 
 
 export default function Works({ isActive, isModal, setIsModal, setSelectedWork }) {
@@ -14,19 +13,19 @@ export default function Works({ isActive, isModal, setIsModal, setSelectedWork }
     }
 
 
-    const listAnime = worksList.filter(item => item.type === 'animation').map((works, index) =>
+    const listAnime = worksList.filter(item => item.type === 'animation').map((works) =>
         <li key={works.title} onClick={() => handleWork(works.title)}>
             <img src={works.image} alt={works.title} />
             <p className={styles.title}>{works.title}</p>
         </li>
     )
-    const listSite = worksList.filter(item => item.type === 'site').map((works, index) =>
+    const listSite = worksList.filter(item => item.type === 'site').map((works) =>
         <li key={works.title} onClick={() => handleWork(works.title)}>
             <img src={works.image} alt={works.title} />
             <p className={styles.title}>{works.title}</p>
         </li>
     )
-    const listApp = worksList.filter(item => item.type === 'app').map((works, index) =>
+    const listApp = worksList.filter(item => item.type === 'app').map((works) =>
         <li key={works.title} onClick={() => handleWork(works.title)}>
             <img src={works.image} alt={works.title} />
             <p className={styles.title}>{works.title}</p>

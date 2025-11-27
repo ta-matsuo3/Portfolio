@@ -8,7 +8,7 @@ export default function Modal({ work, isModal, setIsModal }) {
 
     return (
         <div className={`${styles.mask} ${isModal ? styles.open : ''}`} onClick={() => setIsModal(!isModal)}>
-            <div className={`${styles.modal}`} onClick={(e) => e.stopPropagation()}>
+            <div className={`${styles.modal} ${isModal ? styles.open : ''}`} onClick={(e) => e.stopPropagation()}>
                 <div className={styles.work}>
                     <div className={styles.cancel} onClick={() => setIsModal(!isModal)}>
                         <span></span>
@@ -26,12 +26,12 @@ export default function Modal({ work, isModal, setIsModal }) {
                                 />
                             ))}
                         </div>}
-                        {work.image && <img src={work.image} alt={work.title} />}
+                        {work.image && <a href={work.url} target="_blank"><img src={work.image} alt={work.title} /></a>}
 
                         <div className={styles.btns}>
-                            {work.url && <button><a href={work.url} target="_blank">{`link`}</a></button>}
-                            {work.figma && <button><a href={work.figma} target="_blank">{`figma`}</a></button>}
-                            {work.github && <button><a href={work.github} target="_blank">{`github`}</a></button>}
+                            {work.url && <a href={work.url} target="_blank"><button>link</button></a>}
+                            {work.figma && <a href={work.figma} target="_blank"><button>{`figma`}</button></a>}
+                            {work.github && <a href={work.github} target="_blank"><button>{`github`}</button></a>}
                         </div>
                         {work.period && <p>{`制作期間：${work.period}`}</p>}
                     </div>

@@ -9,7 +9,7 @@
     left: 36px;
 
     @media (width<=820px) {
-        position: absolute;
+        /* position: absolute; */
     }
 
     li {

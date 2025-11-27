@@ -94,9 +94,10 @@
             margin: 2rem 2rem 0 2rem;
             align-self: flex-end;
             padding: 1rem;
+            cursor: pointer;
 
             &.expanded {
-                width: 450px;
+                max-width: 450px;
                 height: 220px;
 
                 @media(width<=770px) {

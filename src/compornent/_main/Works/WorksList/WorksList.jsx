@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './WorksList.module.css'
-import icon from '../../../../assets/circle_arrow.svg'
 
 export default function WorksList({ list, title }) {
     const [open, setOpen] = useState(true);
