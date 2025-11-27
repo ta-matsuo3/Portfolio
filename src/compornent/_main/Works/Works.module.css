@@ -20,9 +20,10 @@
 
     @media(width<=820px) {
         width: calc(100%);
-        transform: translateX(65px);
-        top: 220px;
+        transform: translateX(0);
+        top: 200px;
         height: calc(100% - 220px);
+        padding-inline-start: 65px;
 
     }
 

@@ -16,12 +16,13 @@
     &.open {
         pointer-events: auto;
         opacity: 1;
+        backdrop-filter: blur(4px)
     }
 
     .modal {
         position: fixed;
-        max-width: 600px;
-        max-height: 500px;
+        max-width: 700px;
+        max-height: 600px;
         background-color: #444;
         border-radius: 8px;
         scale: 0;
@@ -81,70 +82,100 @@
 
 .work {
     display: flex;
-    margin: 2rem;
     gap: 2rem;
+    margin: 2rem;
 
     @media (width<=770px) {
         flex-direction: column;
     }
 
-    .workInfo {
+
+    .workWrapper {
         display: flex;
         flex-direction: column;
-        gap: 8px;
 
-
-        p {
-            color: #fff;
-            font-size: 1rem;
-            white-space: pre-line;
-        }
-
-        img {
-            max-width: 250px;
-            border-radius: 8px;
-            height: auto;
-        }
-
-        .skills {
+        .title {
             display: flex;
-
             gap: 8px;
-        }
 
-        .skillIcon {
-            width: 32px;
-            height: 32px;
-            object-fit: contain;
-        }
-
-
-        a {
-            button {
-                text-decoration: none;
+            p {
                 color: #fff;
+                font-size: 20px;
+            }
+
+            .skills {
+                display: flex;
+                gap: 8px;
             }
         }
 
-        .btns {
-            display: flex;
-            gap: 0.5rem;
-
-
-            button {
-                padding: 0.5rem 1rem;
-                background-color: rgb(119, 119, 255);
-                border-radius: 50px;
-            }
-        }
-
-    }
-
-    .workDesc {
         p {
             color: #fff;
-            font-size: 1rem;
+            font-size: 14px;
             white-space: pre-line;
+        }
+
+        .workInfoWrap {
+            display: flex;
+            gap: 16px;
+
+            .workInfo {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    max-width: 250px;
+                    border-radius: 8px;
+                    height: auto;
+                }
+
+                .skillIcon {
+                    width: 32px;
+                    height: 32px;
+                    object-fit: contain;
+                }
+
+
+                a {
+                    button {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+
+                .btns {
+                    display: flex;
+                    gap: 0.5rem;
+
+
+                    button {
+                        padding: 0.5rem 1rem;
+                        background-color: rgb(119, 119, 255);
+                        border-radius: 50px;
+                    }
+                }
+
+                .props {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    p {
+                        color: #fff;
+                        font-size: 16px;
+                        white-space: pre-line;
+                    }
+                }
+
+            }
+
+            .workDesc {
+                p {
+                    color: #fff;
+                    font-size: 1rem;
+                    white-space: pre-line;
+                }
+            }
         }
     }
 }

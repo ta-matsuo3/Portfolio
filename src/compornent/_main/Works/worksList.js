@@ -14,8 +14,16 @@ const worksList = [
             month: 1,
             day: 1
         },
-        program: ['javaScript', 'GSAP', 'html', 'css',],
-        type: 'animation'
+        skills: ['js', 'html', 'css',],
+        others: ['GSAP',],
+        type: 'animation',
+        desc: '',
+        Notes: '',
+        period: '',
+        figma: '',
+        github: '',
+        target: '',
+        concept: '',
     },
     {
         title: "架空のTVゲームのホームページ",
@@ -29,13 +37,21 @@ const worksList = [
         skills: ['html', 'css', 'js',],
         others: ['GSAP',],
         type: 'site',
-        desc: 'Figmaで作成した自作カンプを忠実に再現し、サイトを構築した実習作品です。',
+        desc:
+            `Figmaで作成した自作カンプを忠実に再現した実習作品。
+
+            ペルソナやコンセプトの設定>デザイン>レビュー>調整の一連の流れを初めて体験。
+            （デザイン/カンプ作成で5日）
+
+            動きのあるサイトを目指していたが、全て実装すると期日超過しそうだったので、優先度の低い機能（ロード画面）などは実装を断念した。
+            
+            ※各種画像は生成AIを使用`,
         Notes: '',
-        period: '2週間（デザイン5日/コーディング5日）',
+        period: '10日',
         figma: 'https://www.figma.com/design/6GKtuP8sajb5RXPttHYw8l/%E6%8E%88%E6%A5%ADLP?node-id=0-1&p=f&t=JwWunWVNTfz6p9p1-0',
         github: 'https://github.com/ta-matsuo3/Portfolio',
-        target: '',
-        concept: '',
+        target: 'ゲーム好きの男子中高生',
+        concept: 'コアゲーマーへの第一歩',
     },
     {
         title: "架空のゲームプラットフォーム",
@@ -47,7 +63,14 @@ const worksList = [
             day: 17,
         },
         skills: ['html', 'css', 'js',],
-        type: 'site'
+        type: 'site',
+        desc: '',
+        Notes: '',
+        period: '',
+        figma: '',
+        github: '',
+        target: '',
+        concept: '',
     },
     {
         title: "架空のブログサイト",

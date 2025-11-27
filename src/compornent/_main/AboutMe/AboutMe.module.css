@@ -72,7 +72,7 @@
 
             &.expanded {
                 width: 700px;
-                height: 500px;
+                height: 450px;
 
                 @media(width<=770px) {
                     height: 400px;
