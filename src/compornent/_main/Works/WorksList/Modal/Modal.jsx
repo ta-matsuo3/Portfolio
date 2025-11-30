@@ -17,17 +17,19 @@ export default function Modal({ work, isModal, setIsModal }) {
                     <div className={styles.workWrapper}>
                         <div className={styles.title}>
                             <p style={{ fontWeight: 800 }}>{work.title}</p>
-                            {work.skills && <div className={styles.skills}>
-                                {work.skills?.map((skill) => (
-                                    <img
-                                        key={skill}
-                                        src={skillIcons[skill]}
-                                        alt={skill}
-                                        className={styles.skillIcon}
-                                    />
-                                ))}
-                            </div>}
+                            {work.skills &&
+                                <div className={styles.skills}>
+                                    {work.skills?.map((skill) => (
+                                        <img
+                                            key={skill}
+                                            src={skillIcons[skill]}
+                                            alt={skill}
+                                            className={styles.skillIcon}
+                                        />
+                                    ))}
+                                </div>}
                         </div>
+
                         <div className={styles.workInfoWrap}>
                             <div className={styles.workInfo}>
                                 {work.image && <a href={work.url} target="_blank"><img src={work.image} alt={work.title} /></a>}
@@ -37,15 +39,13 @@ export default function Modal({ work, isModal, setIsModal }) {
                                     {work.github && <a href={work.github} target="_blank"><button>github</button></a>}
                                 </div>
                                 <div className={styles.props}>
-                                    {work.period && <p>{`制作期間：
-                                    ${work.period}`}</p>}
-                                    {work.target && <p>{`ターゲット：
-                                    ${work.target}`}</p>}
-                                    {work.concept && <p>{`コンセプト：
-                                    ${work.concept}`}</p>}
+                                    {work.period && <><p>制作期間：</p><span>{work.period}</span></>}
+                                    {work.target && <><p>ターゲット：</p><span>{work.target}</span></>}
+                                    {work.concept && <><p>コンセプト：</p><span>{work.concept}</span></>}
                                 </div>
                             </div>
                             <div className={styles.workDesc}>
+                                <h3>作品概要</h3>
                                 {work.desc && <p>{`${work.desc}`}</p>}
                             </div>
                         </div>

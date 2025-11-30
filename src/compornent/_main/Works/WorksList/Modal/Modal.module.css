@@ -85,18 +85,21 @@
     gap: 2rem;
     margin: 2rem;
 
-    @media (width<=770px) {
-        flex-direction: column;
-    }
-
 
     .workWrapper {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
 
         .title {
             display: flex;
             gap: 8px;
+            align-items: center;
+            justify-content: center;
+
+            @media (width<=770px) {
+                flex-direction: column;
+            }
 
             p {
                 color: #fff;
@@ -106,6 +109,10 @@
             .skills {
                 display: flex;
                 gap: 8px;
+
+                img {
+                    width: 25px;
+                }
             }
         }
 
@@ -117,16 +124,26 @@
 
         .workInfoWrap {
             display: flex;
-            gap: 16px;
+            gap: 32px;
+
+            @media (width<=770px) {
+                flex-direction: column;
+            }
 
             .workInfo {
                 display: flex;
                 flex-direction: column;
 
+                gap: 8px;
+
                 img {
-                    max-width: 250px;
+                    width: 320px;
                     border-radius: 8px;
                     height: auto;
+
+                    @media (width<=770px) {
+                        width: 250px;
+                    }
                 }
 
                 .skillIcon {
@@ -146,12 +163,13 @@
                 .btns {
                     display: flex;
                     gap: 0.5rem;
+                    margin-block-end: 1rem;
 
 
                     button {
                         padding: 0.5rem 1rem;
                         background-color: rgb(119, 119, 255);
-                        border-radius: 50px;
+                        border-radius: 16px;
                     }
                 }
 
@@ -159,17 +177,34 @@
                     display: flex;
                     flex-direction: column;
                     gap: 8px;
+                    background-color: #303030;
+                    border-radius: 8px;
+                    padding: 1rem;
 
                     p {
                         color: #fff;
                         font-size: 16px;
-                        white-space: pre-line;
+                        font-weight: 800;
+                    }
+
+                    span {
+                        color: #fff;
+                        font-size: 16px;
+                        line-height: 1;
                     }
                 }
 
             }
 
             .workDesc {
+                background-color: #303030;
+                border-radius: 8px;
+                padding: 1rem;
+
+                h3 {
+                    color: #fff;
+                }
+
                 p {
                     color: #fff;
                     font-size: 1rem;
