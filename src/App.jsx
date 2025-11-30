@@ -12,9 +12,14 @@ export default function App() {
   const [isActive, setIsActive] = useState(false)
   const [expanded, setExpanded] = useState(false)
   const [isModal, setIsModal] = useState(false)
+  const [isDoubleClick, setIsDoubleClick] = useState(false)
   const [selectedWork, setSelectedWork] = useState(null);
 
   const letterAPIs = useRef([]);
+
+  const handleDoubleClick = () => {
+    setIsDoubleClick(!isDoubleClick)
+  }
 
   useEffect(() => {
     setIsActive(isClickWork);
@@ -39,9 +44,11 @@ export default function App() {
     });
   };
 
+
+
   return (
     <>
-      <div style={{ width: "100%", height: "100%" }} onClick={handleClick}  >
+      <div style={{ width: "100%", height: "100%" }} onClick={handleClick} onDoubleClick={handleDoubleClick} >
         <Home isClickWork={isClickWork} setIsClickWork={setIsClickWork} expanded={expanded} setExpanded={setExpanded} />
         <Works isActive={isActive} isModal={isModal} setIsModal={setIsModal} setSelectedWork={setSelectedWork} />
         <AboutMe isClickWork={isClickWork} expanded={expanded} setExpanded={setExpanded}>

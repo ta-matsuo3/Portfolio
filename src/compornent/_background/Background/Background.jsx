@@ -5,13 +5,14 @@ import { Physics } from "@react-three/cannon";
 import Floor from "../Floor/Floor";
 import FallingText from "../Text/FallingText";
 
-export default function Backgroud({ letterAPIs }) {
+export default function Backgroud({ letterAPIs, isDoubleClick }) {
+    const [homeText, setHomeText] = useState("Physics");
+    const [worksText, setWorksText] = useState("Engine");
+    const [aboutText, setAboutText] = useState("Test");
+
     const [showHome, setShowHome] = useState(false);
     const [showWorks, setShowWorks] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
-
-    // 各文字のapiをまとめる
-
 
     useEffect(() => {
         setTimeout(() => setShowHome(true), 0);
@@ -19,7 +20,21 @@ export default function Backgroud({ letterAPIs }) {
         setTimeout(() => setShowAbout(true), 2000);
     }, []);
 
-    // クリックで全ての文字にはじける
+    useEffect(() => {
+        setHomeText("");
+        setWorksText("");
+        setAboutText("");
+
+        // 少し待って再度文字をセット（再レンダリングで落下）
+        setTimeout(() => {
+            setHomeText("HOME");
+            setWorksText("WORKS");
+            setAboutText("ABOUT ME");
+            // 文字が復活したらAPI配列もクリア
+            letterAPIs.current = [];
+        }, 300);
+    }, [isDoubleClick])
+
 
 
     return (
@@ -37,9 +52,9 @@ export default function Backgroud({ letterAPIs }) {
                 <spotLight position={[-5, 10, -5]} angle={0.3} intensity={1} castShadow />
                 <Physics gravity={[0, -9.8, 0]}>
                     <Floor />
-                    {showHome && <FallingText text="Physics" color="#3fa9f5" letterAPIs={letterAPIs} />}
-                    {showWorks && <FallingText text="Engine" color="#a33ff5" letterAPIs={letterAPIs} />}
-                    {showAbout && <FallingText text="Test" color="#f5a63f" letterAPIs={letterAPIs} />}
+                    {showHome && <FallingText text={homeText} color="#3fa9f5" letterAPIs={letterAPIs} />}
+                    {showWorks && <FallingText text={worksText} color="#a33ff5" letterAPIs={letterAPIs} />}
+                    {showAbout && <FallingText text={aboutText} color="#f5a63f" letterAPIs={letterAPIs} />}
                 </Physics>
             </Canvas>
         </div>
