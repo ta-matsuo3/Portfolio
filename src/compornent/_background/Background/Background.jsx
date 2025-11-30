@@ -1,47 +1,45 @@
-import React, { useState, useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
-import { Physics, useBox, usePlane } from "@react-three/cannon";
-
+// Backgroud.js
+import React, { useState, useEffect, useRef } from "react";
+import { Canvas, useThree } from "@react-three/fiber";
+import { Physics } from "@react-three/cannon";
 import Floor from "../Floor/Floor";
 import FallingText from "../Text/FallingText";
 
-
-
-// ===== メインシーン =====
-export default function Backgroud() {
-    // ---------- 表示タイミング管理 ----------
+export default function Backgroud({ letterAPIs }) {
     const [showHome, setShowHome] = useState(false);
     const [showWorks, setShowWorks] = useState(false);
     const [showAbout, setShowAbout] = useState(false);
 
+    // 各文字のapiをまとめる
+
+
     useEffect(() => {
-        // レンダー直後
         setTimeout(() => setShowHome(true), 0);
-
-        // 1秒後
         setTimeout(() => setShowWorks(true), 1000);
-
-        // 2秒後
         setTimeout(() => setShowAbout(true), 2000);
     }, []);
 
+    // クリックで全ての文字にはじける
+
+
     return (
-        <div style={{ width: "100vw", height: "100vh" }}>
+        <div
+            style={{ width: "100vw", height: "100vh" }}
+        >
             <Canvas
-                // shadows
                 style={{ background: "black", width: "100vw", height: "100vh", position: "fixed" }}
                 camera={{ position: [0, 3, 10], fov: 40 }}
+                fog={{ color: "#000000", near: 5, far: 20 }}
             >
-                {/* 光源 */}
-                <ambientLight intensity={1.2} />
-                <directionalLight position={[5, 10, 5]} intensity={3} castShadow />
-                <pointLight position={[0, 6, 5]} intensity={5} />
+                <ambientLight intensity={1.0} />
+                <directionalLight position={[5, 10, 5]} intensity={2.5} castShadow />
+                <pointLight position={[-5, 5, -5]} intensity={1.5} />
+                <spotLight position={[-5, 10, -5]} angle={0.3} intensity={1} castShadow />
                 <Physics gravity={[0, -9.8, 0]}>
                     <Floor />
-                    {/* 順番に落下 */}
-                    {showHome && <FallingText text="HOME" color="#3fa9f5" />}
-                    {showWorks && <FallingText text="WORKS" color="#a33ff5" />}
-                    {showAbout && <FallingText text="ABOUT ME" color="#f5a63f" />}
+                    {showHome && <FallingText text="Physics" color="#3fa9f5" letterAPIs={letterAPIs} />}
+                    {showWorks && <FallingText text="Engine" color="#a33ff5" letterAPIs={letterAPIs} />}
+                    {showAbout && <FallingText text="Test" color="#f5a63f" letterAPIs={letterAPIs} />}
                 </Physics>
             </Canvas>
         </div>

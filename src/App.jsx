@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Backgroud from "@/compornent/_background/Background/Background";
 import Home from "@/compornent/_main/Home/Home";
 import Works from "@/compornent/_main/Works/Works";
@@ -14,6 +14,7 @@ export default function App() {
   const [isModal, setIsModal] = useState(false)
   const [selectedWork, setSelectedWork] = useState(null);
 
+  const letterAPIs = useRef([]);
 
   useEffect(() => {
     setIsActive(isClickWork);
@@ -27,9 +28,20 @@ export default function App() {
     }
   }, [isActive]);
 
+  const handleClick = () => {
+    letterAPIs.current.forEach((api) => {
+      const impulse = [
+        (Math.random() - 0.5) * 1,
+        Math.random() * 0.5 + 1,
+        (Math.random() - 0.5) * 1,
+      ];
+      api.applyImpulse(impulse, [0, 0, 0]);
+    });
+  };
+
   return (
     <>
-      <div className="Wrap">
+      <div style={{ width: "100%", height: "100%" }} onClick={handleClick}  >
         <Home isClickWork={isClickWork} setIsClickWork={setIsClickWork} expanded={expanded} setExpanded={setExpanded} />
         <Works isActive={isActive} isModal={isModal} setIsModal={setIsModal} setSelectedWork={setSelectedWork} />
         <AboutMe isClickWork={isClickWork} expanded={expanded} setExpanded={setExpanded}>
@@ -37,7 +49,7 @@ export default function App() {
         </AboutMe>
         <Modal work={selectedWork} setIsModal={setIsModal} isModal={isModal} />
       </div>
-      <Backgroud />
+      <Backgroud letterAPIs={letterAPIs} />
     </>
   );
 }
