@@ -28,8 +28,8 @@ export default function Backgroud({ letterAPIs, isDoubleClick }) {
         // 少し待って再度文字をセット（再レンダリングで落下）
         setTimeout(() => {
             setHomeText("Physics");
-            setWorksText("Physics");
-            setAboutText("Physics");
+            setWorksText("Engine");
+            setAboutText("Test");
             // 文字が復活したらAPI配列もクリア
             letterAPIs.current = [];
         }, 300);
