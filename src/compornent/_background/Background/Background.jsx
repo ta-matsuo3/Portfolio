@@ -27,9 +27,9 @@ export default function Backgroud({ letterAPIs, isDoubleClick }) {
 
         // 少し待って再度文字をセット（再レンダリングで落下）
         setTimeout(() => {
-            setHomeText("HOME");
-            setWorksText("WORKS");
-            setAboutText("ABOUT ME");
+            setHomeText("Physics");
+            setWorksText("Physics");
+            setAboutText("Physics");
             // 文字が復活したらAPI配列もクリア
             letterAPIs.current = [];
         }, 300);
